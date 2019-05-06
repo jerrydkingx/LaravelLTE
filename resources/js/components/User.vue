@@ -18,13 +18,18 @@
                     <th>User</th>
                     <th>Date</th>
                     <th>Type</th>
+                    <th>Email</th>
+                    <th>Bio</th>
                     <th>Modify</th>
                   </tr>
-                  <tr>
-                    <td>183</td>
-                    <td>John Doe</td>
-                    <td>11-7-2014</td>
-                    <td><span class="tag tag-success">Approved</span></td>
+                  <tr v-for="user in users" :key="user.id">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.date}}</td>
+                    <td>{{user.type}}</td>
+                    <td>{{user.email}}</td>
+                    <th>{{user.bio}}</th>
+                    <td><span class="tag tag-success">{{user.type}}</span></td>
                     <td>
                         <a href="#">
                             <li class="fa fa-edit"></li>
@@ -102,6 +107,9 @@
     export default {
         data () {
     return {
+      users: {
+
+      },
       // Create a new form instance
       form: new Form({
         name: '',
@@ -114,12 +122,17 @@
     }
   },
     methods:{
+      usercollection(){
+       // axios.get("api/user").then(({data})=>(this.users=data));
+        axios.get("api/users").then(({ data }) => (this.users = data.data));
+
+      },
       userCreate(){
           this.form.post('api/users');
       }
     },
-        mounted() {
-            console.log('Component mounted.')
+        created() {
+            this.usercollection();
         }
     }
 </script>
