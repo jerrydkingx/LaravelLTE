@@ -1,12 +1,14 @@
 <h4>Frameworks and Libraries:</h4>
-Laravel 5.6
-Vue.js 2
-Axios
+Laravel 5.7</br>
+Vue.js 2.8</br>
+Axios</br>
+AdminLTE</br>
+Vueform
+
 <h4>Provides:</h4>
-Mutli column filtering
-filter by relationship
-order by columns
-export to csv (Coming soon in next video)
+CRUD</br>
+Taxonomy of Users</br>
+API Controll</br>
 
 <h4>Installation</h4>
 git clone https://github.com/jerrydkingx/LaravelLTE.git
