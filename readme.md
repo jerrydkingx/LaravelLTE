@@ -20,3 +20,5 @@ git clone https://github.com/jerrydkingx/LaravelLTE.git
 <code>npm install</code>
 
 <code>npm run watch</code>
+
+For Support Skype: xtremprovider
